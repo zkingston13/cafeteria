@@ -33,6 +33,7 @@ Route::get('/detalle/{id_producto}',[ProductosController::class,'show']);
 
 Route::post('/pedido/procesar', [PedidoController::class, 'procesar'])->name('pedido.procesar');
 Route::get('/mis-pedidos', [PedidoController::class, 'misPedidos'])->name('pedidos.mis-pedidos');
+Route::resource('/pedidos',PedidoController::class);
 
 Route::post('/registrar',[RegistroClienteController::class,'store'])->name('registrar');
 
